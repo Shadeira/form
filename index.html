@@ -1,0 +1,204 @@
+<html>
+<head>
+    <title>Order Form</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+ 
+<script src="functiondollars.js" type="text/javascript"></script>  
+</script>   
+   
+</head>
+<body background="pnd3.png">
+  
+
+<div class="header">
+
+
+<h1>Bowling Food Menu<h1>
+
+
+</div>
+<div id="minibody">
+<div class="left_div1">
+
+<form name="order" method="post" action="mailto:shadeirnes@gmail.com" onsubmit="return checkform()" onreset="location.reload()"  >
+
+ <p class="sectionHead"> <span class="sectionNum"> &nbsp;1 </span>&nbsp; Product Selection</p>
+<fieldset>
+  
+  PRODUCT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select name="product" id="product" onchange="order_price()">
+      <option value="0">Bolwing Alley in New York City Guides
+      <option value="13.50">Brooklyn Bowl Food Menu Guide ($13.50)
+      <option value="20.00">Frames Bowling Lounge Food Menu Guide  ($20.00)
+      <option value="27.00">Lucky Strike Bowling Alley Food Menu Guide ($27.00)
+      </select>
+      <select name="qty" onchange="order_price()" id="quantity" >
+      <option>Qty</option>
+      <option>1<option>2<option>3<option>4<option>5<option>6<option>7
+      <option>8<option>9<option>10
+      </select>
+      <p align="right" style="margin-right:10px">
+      <font style="text-align:right; "> + TAX (6%)</font>
+</p>
+      SHIPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="display:block; padding-left:100px;">
+      <input type="radio" name="shipping" value="10" onclick="shipping_price(this)">
+       STANDARD (3-5 DAYS) - $10<br>
+      <input type="radio" name="shipping" value="15" onclick="shipping_price(this)">
+       EXPRESS (2 DAYS): $15<br>
+      <input type="radio" name="shipping" value="20" onclick="shipping_price(this)">
+       NEXT BUSINESS DAY (1 DAY): $20
+</span>
+
+<hr />
+
+ <div class="right_div">
+   <table id="productTable">
+     <tr>
+       <td class="items" id="itemName"> Product <br>
+       <br></td>     
+<td>  
+ <input  name="sub1" size="9" value="0.00"  disabled />
+ </td>
+ </tr>
+<tr>
+ <td class="items" style="Width:500px">Tax</td>
+<td> 
+ <input id="tot2" name="sub2" size="9" value="0.00" disabled />
+ </td>
+ </tr>
+ <tr>
+<td class="items" style="Width:500px">Shipping</td>
+<td>
+ <input name="sub3" size="9" value="0.00" disabled />
+ </td>
+ </tr>
+ <tr>
+   <td class="items" style="Width:500px">TOTAL</td>
+ <td><span value="0.00" id="total"> $ 0.00 </span>
+ </td>
+</tr>
+</table>
+<br />
+
+
+</div>
+</fieldset>
+
+<p class="sectionHead"> <span class="sectionNum"> &nbsp;2 </span>&nbsp; SHIPPING ADDRESS</p>
+
+<fieldset>
+<table>
+<tr><td>NAME:</td><td>
+       <input name="sname" size="40" />
+      </td> </tr>
+<tr><td> STREET:
+   </td><td>
+      <textarea rows="3" cols="40" name="sstreet"></textarea>
+   </td> </tr>
+ <tr><td> CITY:</td>
+  <td>
+      <input size="30" name="scity"></td>
+      </tr>
+       <tr><td>
+      STATE:</td><td>
+      <select name="sstate">
+      <option>AL<option>AK<option>AZ<option>AR<option>CA<option>CO<option>CT<option>DE<option>DC
+      <option>FL<option>GA<option>HI<option>ID<option>IL<option>IN<option>IA<option>KS<option>KY
+      <option>LA<option>ME<option>MD<option>MA<option>MI<option>MN<option>MS<option>MO<option>MT
+      <option>NE<option>NV<option>NH<option>NJ<option>NM<option>NY<option>NC<option>ND<option>OH
+      <option>OK<option>OR<option>PA<option>RI<option>SC<option>SD<option>TN<option>TX<option>UT
+      <option>VT<option>VA<option>WA<option>WV<option>WI<option>WY
+      </select>
+       </td></tr>
+    <tr><td>ZIP:</td><td>
+       <input size="10" name="szip" />
+    </td></tr> 
+   </table>
+   <hr />
+</fieldset>
+<p class="sectionHead"> <span class="sectionNum"> &nbsp;3 </span>&nbsp; BILLING ADDRESS</p>
+
+<fieldset>
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="checkbox" name="billcb" onclick="copy_shipping()" />Same as Shipping Address
+<br /><br />
+<table>
+<tr><td>NAME:</td><td>
+       <input name="bname" size="40" />
+      </td> </tr>
+<tr><td> STREET:
+   </td><td>
+      <textarea rows="3" cols="40" name="bstreet"></textarea>
+   </td> </tr>
+ <tr><td> CITY:</td>
+  <td>
+      <input size="30" name="bcity" /></td>
+      </tr>
+       <tr><td>
+      STATE:</td><td>
+      <select name="bstate">
+      <option>AL<option>AK<option>AZ<option>AR<option>CA<option>CO<option>CT<option>DE<option>DC
+      <option>FL<option>GA<option>HI<option>ID<option>IL<option>IN<option>IA<option>KS<option>KY
+      <option>LA<option>ME<option>MD<option>MA<option>MI<option>MN<option>MS<option>MO<option>MT
+      <option>NE<option>NV<option>NH<option>NJ<option>NM<option>NY<option>NC<option>ND<option>OH
+      <option>OK<option>OR<option>PA<option>RI<option>SC<option>SD<option>TN<option>TX<option>UT
+      <option>VT<option>VA<option>WA<option>WV<option>WI<option>WY
+      </select>
+       </td></tr>
+    <tr><td>ZIP:</td><td>
+       <input size="10" name="bzip" />
+    </td></tr> 
+   </table>
+     <hr />
+     
+    </fieldset>
+    <p class="sectionHead"> <span class="sectionNum"> &nbsp;4 </span>&nbsp; CREDIT CARD INFORMATION
+     </p>
+
+    <fieldset>
+    NAME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input name="cname" size="40" />  
+      <br /><br />
+      CARD: 
+      <img src="CC_icons.png" />
+      <br />
+      
+      
+      <input type="radio" name="card" value="10" />
+       American Express&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <input type="radio" name="card" value="15" />
+       Visa
+       <br />
+      <input type="radio" name="card" value="20" />
+       Mastercard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="card" value="20" />
+       Discover
+     <br /><br />
+       NUMBER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <input name="cnumber" size="40" /> 
+      <br /><br />
+      EXPIRATION &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <select name="cexpiration_month">
+       <option>1<option>2<option>3<option>4<option>5<option>6<option>7<option>8<option>9
+      <option>10<option>11<option>12
+      </select>
+      &nbsp;&nbsp;&nbsp;&nbsp; 
+      <select name="cexpiration_year">
+      <option>2012<option>2013<option>2014<option>2015<option>2016<option>2017<option>2018
+      </select>
+     </fieldset>
+</div>
+</div>
+<input type="reset" id="reset_button" value="RESET" >  </input>
+
+<input type="submit" id="submit_button" value="SUBMIT">  </input>
+
+</form>
+
+</body>
+</html>
