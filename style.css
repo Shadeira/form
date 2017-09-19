@@ -1,0 +1,154 @@
+body 
+{
+	margin:10;
+	font-family:"Castellar", Times, serif;
+	font-size:16px;
+
+}
+
+
+
+.class{
+	float: left;
+}
+
+.header
+{
+	text-align: center;
+	height:20px;
+	width:99%;
+    padding-top:0px;
+    padding-bottom:60px;
+    padding-left:0px;
+    background-color:gold;
+}
+
+
+.left_div1
+{
+	width:440px;
+	height:auto;;
+	margin:0 auto;
+	background-color: #fff;
+	clear:left;
+	font-size:14px;
+	color:blue;
+	
+	
+	
+	
+}
+.left_div2
+{
+	width:440px;
+	height:auto;
+	
+    padding-left:160px;
+	margin-top:5px;
+	background-color:light blue;
+    
+	font-size:14px;
+	color:light blue;
+	
+}
+.right_div
+{
+	background-color: orange;
+	font-size:14px;
+	height:auto;
+	width:200px;
+	color:white;
+	margin-top:20px;
+
+	
+}
+
+h2
+{
+	font-weight:400;
+	color:blue;
+	margin:0;
+}
+
+#minibody {	
+	margin-top: 10px;
+	padding: 10px;
+	background-color: grey;
+    margin: auto;
+	margin-bottom: 20px;
+    height: 200px;
+	width: 500px;
+	display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+	box-shadow: 0px 0px 20px grey;	
+}
+
+#tot2
+{
+	margin-top:10px;
+}
+
+#submit_button
+{
+	
+    position:relative;
+    margin-top:50px;
+    left:630px;
+	right:35px;
+	bottom:10px;
+	width:100px;
+	height:38px;
+	color:white;
+	background-color:black;
+  z-index:1000;
+   padding-top: 0;
+  cursor:pointer;
+  border:0;
+  
+}
+
+#reset_button
+{
+	
+    position:relative;
+    padding-top: 0;
+    left:630px;
+
+	bottom:10px;
+	width:100px;
+	height:38px;
+	color:white;
+	 background-color:black;
+  z-index:1000;
+  cursor:pointer;
+   border:0;
+  
+}
+
+.sectionHead{
+	font-weight: bold;
+	color: blue;
+	font-family: cursive;
+	font-size: 16px;
+}
+.sectionNum{
+	background: lightblue;
+	color: blue;
+	font-family: cursive;
+}
+
+
+#productTable{
+	width: 250px;
+}
+
+#total{
+	font-size:23px;
+	color: darkred;
+	font-weight: bold;
+}
+td{
+	font-size: 16px;
+}
